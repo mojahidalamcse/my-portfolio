@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
+    "stylelint": "stylelint \"**/*.{css,scss,js,jsx,ts,tsx}\"",
+    "stylelint:fix": "stylelint \"**/*.{css,scss,js,jsx,ts,tsx}\" --fix"
   },
   "dependencies": {
     "next": "16.2.10",
@@ -20,7 +24,19 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "prettier": "^3.6.2",
+    "stylelint": "^16.25.0",
+    "stylelint-use-logical-spec": "^5.0.1",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "baseline-browser-mapping": "2.9.5",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8.5.10"
   }
 }
