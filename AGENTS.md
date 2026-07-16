@@ -38,4 +38,38 @@ When generating git commit messages for this project, you MUST strictly adhere t
 - `feat(auth): add jwt login system`
 - `style(ui): fix button alignment and spacing`
 
+# Coding Conventions and Project Structure
+
+## 1. Naming Conventions
+
+- **Files and Directories**: Use `kebab-case` for all file and directory names.
+  - *Example*: `user-profile.tsx`, `auth-service.ts`, `components/ui-elements/`
+- **React Components**: Use `PascalCase` for React component function names.
+  - *Example*: `export function UserProfile() { ... }`, `const ButtonGroup = () => { ... }`
+- **Variables and Functions**: Use `camelCase` for all standard variable and function names.
+  - *Example*: `const userData = ...`, `function calculateTotal() { ... }`
+- **Constants**: Use `CONSTANT_CASE` (UPPER_SNAKE_CASE) for global constants or configuration values.
+  - *Example*: `const MAX_RETRY_COUNT = 3;`, `const API_BASE_URL = '...';`
+
+## 2. Project Architecture and Routing
+
+- **Next.js Pages (`page.tsx`)**: 
+  - The `app/**/page.tsx` files should be kept minimal and act primarily as Server Components.
+  - They should be responsible for data fetching, metadata generation, and passing props to the view component.
+  - Do *not* write the entire UI/view logic directly in `page.tsx`.
+
+- **Views (`@/views/`)**: 
+  - The actual UI and complex layout for a route should reside in the `@/views` directory.
+  - Organize views by route name. For a route `/dashboard/settings`, the view component should be in `@/views/dashboard/settings/...`.
+  - Import these view components into the corresponding `page.tsx`.
+
+- **Reusable Components (`@/components/`)**:
+  - Any component that is shared across multiple views or pages must be placed in the `@/components` directory.
+  - Examples include buttons, modals, form inputs, and generic layout wrappers.
+  
+- **TypeScript Types (`@/types/`)**:
+  - Keep global or shared type definitions in the `@/types` directory.
+  - Use the naming convention `module-name.d.ts` for type definition files (e.g., `user.d.ts`, `auth.d.ts`).
+  - Keep types co-located only if they are strictly internal to a single file or component.
+
 ---
