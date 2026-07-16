@@ -6,7 +6,7 @@ const BlankPagelayout = ({
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
-      <main>{children}</main>
+      <main className="flex-1">{children}</main>
     </div>
   );
 };
