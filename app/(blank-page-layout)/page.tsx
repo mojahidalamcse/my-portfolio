@@ -1,12 +1,10 @@
 import { Container } from "@/components/shared/container";
-import { Hero } from "@/views/home/hero";
-import { SkillSection } from "@/views/home/skill";
+import { HomeView } from "@/views/home";
 
 const HomePage = () => {
   return (
     <Container className="py-20">
-      <Hero />
-      <SkillSection />
+      <HomeView />
     </Container>
   );
 };

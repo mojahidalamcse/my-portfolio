@@ -44,7 +44,7 @@ export function SkillSection() {
   return (
     <section id="skills" className="mt-20 space-y-10">
       <div className="space-y-4">
-        <p className="text-sm uppercase tracking-[0.5em] text-white/50">//skills</p>
+        <p className="text-sm uppercase tracking-[0.5em] text-white/50">skills</p>
         <h2 className="text-4xl font-extrabold sm:text-5xl">What I Build With</h2>
         <p className="max-w-3xl text-base text-white/70 sm:text-lg">
           Comfortable across the stack, but I lean backend — I like knowing exactly what happens between a request and a response.
