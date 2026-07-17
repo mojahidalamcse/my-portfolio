@@ -1,5 +1,4 @@
 import { Container } from "./container";
-import { Github, Linkedin, X, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -13,26 +12,26 @@ export function Footer() {
           </div>
 
           <div className="space-y-3 text-sm text-white/70">
-            <p>Say hello at <a href="mailto:robertgarcia@gmail.com" className="text-white underline">robertgarcia@gmail.com</a></p>
+            <p>Say hello at <a href="mailto:ishowspeed@gmail.com" className="text-white underline">ishowspeed@gmail.com</a></p>
             <p>For more info, here&apos;s my <a href="/resume.pdf" className="text-white underline" target="_blank" rel="noreferrer">resume</a></p>
           </div>
 
           <div className="flex flex-wrap items-center gap-3 text-white/90">
             <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:bg-white/10">
-              <Linkedin className="h-5 w-5" />
+              <span className="inline-flex h-5 w-5 items-center justify-center text-xs font-semibold">in</span>
             </a>
             <a href="https://github.com" target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:bg-white/10">
-              <Github className="h-5 w-5" />
+              <span className="inline-flex h-5 w-5 items-center justify-center text-xs font-semibold">gh</span>
             </a>
             <a href="https://twitter.com" target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:bg-white/10">
-              <X className="h-5 w-5" />
+              <span className="inline-flex h-5 w-5 items-center justify-center text-xs font-semibold">x</span>
             </a>
             <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:bg-white/10">
-              <Instagram className="h-5 w-5" />
+              <span className="inline-flex h-5 w-5 items-center justify-center text-xs font-semibold">ig</span>
             </a>
           </div>
 
-          <p className="text-sm text-white/60">© 2023 Robert Garcia</p>
+          <p className="text-sm text-white/60">© 2026 Mojahid Alam</p>
         </div>
 
         <form className="space-y-4 rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_20px_80px_rgba(0,0,0,0.35)] sm:p-8">

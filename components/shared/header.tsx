@@ -1,13 +1,14 @@
-'use client';
+"use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "./container";
 
 const navItems = [
+  { href: "#home", label: "Home" },
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
   { href: "#blog", label: "Blog" },
@@ -17,6 +18,19 @@ const navItems = [
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
+
+  useEffect(() => {
+    // initialize active from the URL hash if present
+    if (typeof window !== "undefined") {
+      setActive(window.location.hash || null);
+
+      const onHashChange = () => setActive(window.location.hash || null);
+      window.addEventListener("hashchange", onHashChange);
+      return () => window.removeEventListener("hashchange", onHashChange);
+    }
+    return;
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl">
@@ -31,7 +45,14 @@ export function Header() {
         <div className="flex flex-1 items-center justify-end gap-4">
           <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className="transition hover:text-white">
+              <Link
+                key={item.href}
+                href={item.href}
+                className={
+                  `transition hover:text-white ${active === item.href ? "bg-white/10 rounded-full px-4 py-2 text-white" : ""}`
+                }
+                onClick={() => setActive(item.href)}
+              >
                 {item.label}
               </Link>
             ))}
@@ -63,8 +84,13 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-2xl border border-white/10 px-4 py-3 transition hover:border-white/20 hover:bg-white/5 hover:text-white"
-                onClick={() => setMenuOpen(false)}
+                className={`rounded-2xl border border-white/10 px-4 py-3 transition hover:border-white/20 hover:bg-white/5 hover:text-white ${
+                  active === item.href ? "bg-white/10 text-white" : ""
+                }`}
+                onClick={() => {
+                  setMenuOpen(false);
+                  setActive(item.href);
+                }}
               >
                 {item.label}
               </Link>
