@@ -1,5 +1,5 @@
 import { Container } from "@/components/shared/container";
-import { HomeView } from "@/views/home/index";
+import { HomeView } from "@/views/home";
 
 const HomePage = () => {
   return (
