@@ -1,14 +1,12 @@
 import { Container } from "@/components/shared/container";
-import { Hero } from "@/views/home/hero";
 import { SkillSection } from "@/views/home/skill";
 
-const HomePage = () => {
+const SkillPage = () => {
   return (
     <Container className="py-20">
-      <Hero />
       <SkillSection />
     </Container>
   );
 };
 
-export default HomePage;
+export default SkillPage;
