@@ -1,6 +1,8 @@
 import { Hero } from "./hero";
 import { SkillSection } from "./skill";
 import { Experience } from "./experience";
+import { Projects } from "./projects";
+import { BlogSection } from "./blog";
 
 export function HomeView() {
   return (
@@ -8,6 +10,8 @@ export function HomeView() {
       <Hero />
       <SkillSection />
       <Experience />
+      <Projects />
+      <BlogSection />
     </div>
   );
 }

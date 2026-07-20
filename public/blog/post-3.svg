@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640">
+  <defs>
+    <linearGradient id="c" x1="0" x2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#fff7ed"/></linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#c)" rx="12"/>
+  <g fill="#0f172a" font-family="Inter, Arial" font-weight="700">
+    <text x="40" y="120" font-size="36">What my Brain Station 23 internship taught me</text>
+  </g>
+</svg>
