@@ -44,7 +44,7 @@ export function BlogSection() {
   return (
     <section id="blog" className="mt-20 space-y-6">
       <div className="space-y-4">
-        <p className="text-sm uppercase tracking-[0.5em] text-white/50">//blog</p>
+        <p className="text-sm uppercase tracking-[0.5em] text-white/50">{"//blog"}</p>
         <h2 className="text-4xl font-extrabold sm:text-5xl">Notes & Write-ups</h2>
         <p className="max-w-3xl text-base text-white/70 sm:text-lg">
           I write when I get stuck on something long enough to learn from it. Mostly DSA, competitive programming, and startup thoughts.
@@ -55,7 +55,13 @@ export function BlogSection() {
         {posts.map((p) => (
           <article key={p.id} className="rounded-2xl border border-white/8 bg-white/3 p-4">
             <div className="overflow-hidden rounded-xl bg-gray-800">
-              <img src={p.image} alt={p.title} className="w-full h-40 object-cover" />
+              <Image
+                src={p.image}
+                alt={p.title}
+                width={1200}
+                height={640}
+                className="w-full h-40 object-cover"
+              />
             </div>
 
             <div className="mt-4">

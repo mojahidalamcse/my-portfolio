@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { Footer } from "@/components/shared/footer";
+
 
 const notoSerifHeading = Noto_Serif({subsets:['latin'],variable:'--font-heading'});
 
@@ -35,7 +35,6 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <main className="flex-1">{children}</main>
-        <Footer />
       </body>
     </html>
   );
