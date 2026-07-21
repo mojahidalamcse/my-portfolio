@@ -11,9 +11,8 @@ const navItems = [
   { href: "#home", label: "Home" },
   { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
-  { href: "#blog", label: "Blog" },
+  // { href: "#blog", label: "Blog" },
   { href: "#projects", label: "Projects" },
-  { href: "#about", label: "About" },
 ];
 
 export function Header() {

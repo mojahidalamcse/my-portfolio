@@ -11,7 +11,7 @@ export function HomeView() {
       <SkillSection />
       <Experience />
       <Projects />
-      <BlogSection />
+      {/* <BlogSection /> */}
     </div>
   );
 }

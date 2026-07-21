@@ -15,13 +15,13 @@ export function Experience() {
   const education: EducationItem[] = [
     {
       degree: "B.Sc. in Computer Science & Engineering",
-      institution: "Bangladesh University of Engineering and Technology (BUET)",
+      institution: "Bangladesh University of Business and Technology (BUBT)",
       period: "2020 — Present",
     },
     {
       degree: "Higher Secondary Certificate (H.S.C)",
-      institution: "Notre Dame College, Dhaka",
-      period: "2018 — 2020",
+      institution: "Kurirgam Collectorate School and College,(KCSC)",
+      period: "2020 — 2022",
     },
     {
       degree: "Secondary School Certificate (S.S.C)",
