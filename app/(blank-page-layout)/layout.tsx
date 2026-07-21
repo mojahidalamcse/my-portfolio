@@ -1,14 +1,16 @@
 import { Header } from "@/components/shared/header";
+import { Footer } from "@/components/shared/footer";
 
-const BlankPagelayout = ({
+const BlankPageLayout = ({
   children,
 }: Readonly<{ children: React.ReactNode }>) => {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white flex flex-col">
       <Header />
-      <main>{children}</main>
+      <main className="flex-1">{children}</main>
+      <Footer />
     </div>
   );
 };
 
-export default BlankPagelayout;
+export default BlankPageLayout;

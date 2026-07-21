@@ -1,5 +1,14 @@
+import { Container } from "@/components/shared/container";
+import { HomeView } from "@/views/home";
+
 const HomePage = () => {
-    return <div>Home Page </div>;
+  return (
+    <Container className="py-20">  
+
+      <HomeView />
+
+    </Container>
+  );
 };
 
 export default HomePage;
